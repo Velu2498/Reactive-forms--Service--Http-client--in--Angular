@@ -1,0 +1,21 @@
+<button class="btn btn-secondary" [routerLink]="['../creatproduct']" style="float: right; top: -10px; position: relative;"> create product</button>
+<table class="table">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Serial.no</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Rating</th>
+            <th>Edit product</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let card of cards;let itx =index;">
+            <th scope="row">{{itx+1}}</th>
+            <td>{{card.productName}}</td>
+            <td>{{card.price}}</td>
+            <td><img src="{{card.image}}" alt=""> </td>
+            <td><button class="btn btn-dark" [routerLink]="['../editproduct']"> edit product</button></td>
+          </tr>
+        </tbody>
+</table>

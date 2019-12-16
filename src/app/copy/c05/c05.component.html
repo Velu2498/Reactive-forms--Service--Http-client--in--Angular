@@ -1,0 +1,55 @@
+<div class="container-fluid">
+    <form  [formGroup]="form">
+        <!-- name -->
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" class="form-control" formControlName="Name">
+        </div>
+        <!-- age -->
+        <div class="form-group">
+            <label>age</label>
+            <input type="number" formControlName="age" class="form-control">
+        </div>
+    
+        <!-- country -->
+        <label for="country">COUNTRY</label>
+        <select name="country" class="form-control" formControlName="country">
+            <option value="us" >US</option>
+            <option value="IN" selected >INDIA</option>
+            <option value="uk">UK</option>
+        </select>
+    
+        <!-- state -->
+        <label for="state" >STATE</label>
+        <select name="state" class="form-control" id="" formControlName="state">
+            <option value="t">TN</option>
+            <option value="a">AP</option>
+            <option value="1" selected>UP</option>
+        </select>
+    
+        <!-- city -->
+        <label for="city">CITY</label>
+        <select name="city" class="form-control" formControlName="city">
+          <option value="CH">CHENNAI</option>
+          <option value="COM">COIMBATHORE</option>
+        </select>
+    
+        <!-- email -->
+        <div class="form-group">
+          <label for="email">Email address:</label>
+          <input type="email" class="form-control"  formControlName="email">
+        </div>
+        <!-- password -->
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control"  formControlName="password">
+        </div>
+        <!-- checkbox -->
+        <div class="checkbox">
+          <label><input type="checkbox"> Remember me</label>
+        </div>
+        <!-- submit button -->
+        <input type="submit" class="btn btn-primary" (click)=fun()>
+    
+    </form>
+    </div>
